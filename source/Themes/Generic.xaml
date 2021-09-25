@@ -2,77 +2,77 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:shio="clr-namespace:Shio">
 
-    <Color x:Key="SioTreeGrid.Control.LightColor">White</Color>
-    <Color x:Key="SioTreeGrid.Control.DarkColor">#FF211AA9</Color>
+    <Color x:Key="ShioTreeGrid.Control.LightColor">White</Color>
+    <Color x:Key="ShioTreeGrid.Control.DarkColor">#FF211AA9</Color>
 
-    <Color x:Key="SioTreeGrid.Border.LightColor">#FFCCCCCC</Color>
-    <Color x:Key="SioTreeGrid.Border.MediumColor">#FF888888</Color>
-    <Color x:Key="SioTreeGrid.Border.DarkColor">#FF444444</Color>
+    <Color x:Key="ShioTreeGrid.Border.LightColor">#FFCCCCCC</Color>
+    <Color x:Key="ShioTreeGrid.Border.MediumColor">#FF888888</Color>
+    <Color x:Key="ShioTreeGrid.Border.DarkColor">#FF444444</Color>
 
-    <Color x:Key="SioTreeGrid.Border.Disabled.LightColor">#FFAAAAAA</Color>
-    <Color x:Key="SioTreeGrid.Border.Disabled.DarkColor">#FF888888</Color>
+    <Color x:Key="ShioTreeGrid.Border.Disabled.LightColor">#FFAAAAAA</Color>
+    <Color x:Key="ShioTreeGrid.Border.Disabled.DarkColor">#FF888888</Color>
 
-    <Color x:Key="SioTreeGrid.ColumnHeader.Fill.Color1">#FFFFFFFF</Color>
-    <Color x:Key="SioTreeGrid.ColumnHeader.Fill.Color2">#FFFFFFFF</Color>
-    <Color x:Key="SioTreeGrid.ColumnHeader.Fill.Color3">#FFF7F8F9</Color>
+    <Color x:Key="ShioTreeGrid.ColumnHeader.Fill.Color1">#FFFFFFFF</Color>
+    <Color x:Key="ShioTreeGrid.ColumnHeader.Fill.Color2">#FFFFFFFF</Color>
+    <Color x:Key="ShioTreeGrid.ColumnHeader.Fill.Color3">#FFF7F8F9</Color>
 
-    <Color x:Key="SioTreeGrid.ColumnHeader.Stroke.Color1">#FFF2F2F2</Color>
-    <Color x:Key="SioTreeGrid.ColumnHeader.Stroke.Color2">#FFD5D5D5</Color>
+    <Color x:Key="ShioTreeGrid.ColumnHeader.Stroke.Color1">#FFF2F2F2</Color>
+    <Color x:Key="ShioTreeGrid.ColumnHeader.Stroke.Color2">#FFD5D5D5</Color>
 
-    <SolidColorBrush x:Key="SioTreeGrid.Background"
+    <SolidColorBrush x:Key="ShioTreeGrid.Background"
                      Color="White" />
-    <SolidColorBrush x:Key="SioTreeGridItem.MouseOver.Background"
+    <SolidColorBrush x:Key="ShioTreeGridItem.MouseOver.Background"
                      Color="#1F26A0DA" />
-    <SolidColorBrush x:Key="SioTreeGridItem.MouseOver.Border"
+    <SolidColorBrush x:Key="ShioTreeGridItem.MouseOver.Border"
                      Color="#a826A0Da" />
-    <SolidColorBrush x:Key="SioTreeGridItem.SelectedInactive.Background"
+    <SolidColorBrush x:Key="ShioTreeGridItem.SelectedInactive.Background"
                      Color="#3DDADADA" />
-    <SolidColorBrush x:Key="SioTreeGridItem.SelectedInactive.Border"
+    <SolidColorBrush x:Key="ShioTreeGridItem.SelectedInactive.Border"
                      Color="#FFDADADA" />
-    <SolidColorBrush x:Key="SioTreeGridItem.SelectedActive.Background"
+    <SolidColorBrush x:Key="ShioTreeGridItem.SelectedActive.Background"
                      Color="#3D26A0DA" />
-    <SolidColorBrush x:Key="SioTreeGridItem.SelectedActive.Border"
+    <SolidColorBrush x:Key="ShioTreeGridItem.SelectedActive.Border"
                      Color="#FF26A0DA" />
-    <SolidColorBrush x:Key="SioTreeGridItem.Expander.Static.Fill"
+    <SolidColorBrush x:Key="ShioTreeGridItem.Expander.Static.Fill"
                      Color="#FFDADADA" />
-    <SolidColorBrush x:Key="SioTreeGridItem.Expander.Static.Stroke"
+    <SolidColorBrush x:Key="ShioTreeGridItem.Expander.Static.Stroke"
                      Color="#FF818181" />
-    <SolidColorBrush x:Key="SioTreeGridItem.Expander.MouseOver.Stroke"
+    <SolidColorBrush x:Key="ShioTreeGridItem.Expander.MouseOver.Stroke"
                      Color="#FF27C7F7" />
-    <SolidColorBrush x:Key="SioTreeGridItem.Expander.MouseOver.Fill"
+    <SolidColorBrush x:Key="ShioTreeGridItem.Expander.MouseOver.Fill"
                      Color="#FFCCEEFB" />
-    <SolidColorBrush x:Key="SioTreeGridItem.Expander.MouseOver.Checked.Stroke"
+    <SolidColorBrush x:Key="ShioTreeGridItem.Expander.MouseOver.Checked.Stroke"
                      Color="#FF1CC4F7" />
-    <SolidColorBrush x:Key="SioTreeGridItem.Expander.MouseOver.Checked.Fill"
+    <SolidColorBrush x:Key="ShioTreeGridItem.Expander.MouseOver.Checked.Fill"
                      Color="#FF82DFFB" />
-    <SolidColorBrush x:Key="SioTreeGridItem.Expander.Checked.Fill"
+    <SolidColorBrush x:Key="ShioTreeGridItem.Expander.Checked.Fill"
                      Color="#FF595959" />
-    <SolidColorBrush x:Key="SioTreeGridItem.Expander.Checked.Stroke"
+    <SolidColorBrush x:Key="ShioTreeGridItem.Expander.Checked.Stroke"
                      Color="#FF262626" />
 
-    <LinearGradientBrush x:Key="SioTreeGrid.ColumnHeader.Fill"
+    <LinearGradientBrush x:Key="ShioTreeGrid.ColumnHeader.Fill"
                          StartPoint="0,0"
                          EndPoint="0,1">
         <LinearGradientBrush.GradientStops>
             <GradientStopCollection>
-                <GradientStop Color="{DynamicResource SioTreeGrid.ColumnHeader.Fill.Color1}"
+                <GradientStop Color="{DynamicResource ShioTreeGrid.ColumnHeader.Fill.Color1}"
                               Offset="0.0" />
-                <GradientStop Color="{DynamicResource SioTreeGrid.ColumnHeader.Fill.Color2}"
+                <GradientStop Color="{DynamicResource ShioTreeGrid.ColumnHeader.Fill.Color2}"
                               Offset="0.5" />
-                <GradientStop Color="{DynamicResource SioTreeGrid.ColumnHeader.Fill.Color3}"
+                <GradientStop Color="{DynamicResource ShioTreeGrid.ColumnHeader.Fill.Color3}"
                               Offset="1.0" />
             </GradientStopCollection>
         </LinearGradientBrush.GradientStops>
     </LinearGradientBrush>
 
-    <LinearGradientBrush x:Key="SioTreeGrid.ColumnHeader.Stroke"
+    <LinearGradientBrush x:Key="ShioTreeGrid.ColumnHeader.Stroke"
                          StartPoint="0,0"
                          EndPoint="0,1">
         <LinearGradientBrush.GradientStops>
             <GradientStopCollection>
-                <GradientStop Color="{DynamicResource SioTreeGrid.ColumnHeader.Stroke.Color1}"
+                <GradientStop Color="{DynamicResource ShioTreeGrid.ColumnHeader.Stroke.Color1}"
                               Offset="0.0" />
-                <GradientStop Color="{DynamicResource SioTreeGrid.ColumnHeader.Stroke.Color2}"
+                <GradientStop Color="{DynamicResource ShioTreeGrid.ColumnHeader.Stroke.Color2}"
                               Offset="1.0" />
             </GradientStopCollection>
         </LinearGradientBrush.GradientStops>
@@ -120,8 +120,8 @@
                                   Margin="4"
                                   HorizontalAlignment="Right"
                                   VerticalAlignment="Top"
-                                  Fill="{StaticResource SioTreeGridItem.Expander.Static.Fill}"
-                                  Stroke="{StaticResource SioTreeGridItem.Expander.Static.Stroke}"
+                                  Fill="{StaticResource ShioTreeGridItem.Expander.Static.Fill}"
+                                  Stroke="{StaticResource ShioTreeGridItem.Expander.Static.Stroke}"
                                   SnapsToDevicePixels="True">
                                 <Path.Data>
                                     <PathGeometry Figures="M0,0 L0,8 L8,0 z" />
@@ -153,28 +153,28 @@
                             </Setter>
                             <Setter Property="Fill"
                                     TargetName="PART_ExpandPath"
-                                    Value="{StaticResource SioTreeGridItem.Expander.Checked.Fill}" />
+                                    Value="{StaticResource ShioTreeGridItem.Expander.Checked.Fill}" />
                             <Setter Property="Stroke"
                                     TargetName="PART_ExpandPath"
-                                    Value="{StaticResource SioTreeGridItem.Expander.Checked.Stroke}" />
+                                    Value="{StaticResource ShioTreeGridItem.Expander.Checked.Stroke}" />
                         </Trigger>
                         <Trigger Property="IsMouseOver"
                                  Value="True">
                             <Setter Property="Stroke"
                                     TargetName="PART_ExpandPath"
-                                    Value="{StaticResource SioTreeGridItem.Expander.MouseOver.Stroke}" />
+                                    Value="{StaticResource ShioTreeGridItem.Expander.MouseOver.Stroke}" />
                             <Setter Property="Fill"
                                     TargetName="PART_ExpandPath"
-                                    Value="{StaticResource SioTreeGridItem.Expander.MouseOver.Fill}" />
+                                    Value="{StaticResource ShioTreeGridItem.Expander.MouseOver.Fill}" />
                         </Trigger>
                         <Trigger Property="IsChecked"
                                  Value="True">
                             <Setter Property="Stroke"
                                     TargetName="PART_ExpandPath"
-                                    Value="{StaticResource SioTreeGridItem.Expander.MouseOver.Checked.Stroke}" />
+                                    Value="{StaticResource ShioTreeGridItem.Expander.MouseOver.Checked.Stroke}" />
                             <Setter Property="Fill"
                                     TargetName="PART_ExpandPath"
-                                    Value="{StaticResource SioTreeGridItem.Expander.MouseOver.Checked.Fill}" />
+                                    Value="{StaticResource ShioTreeGridItem.Expander.MouseOver.Checked.Fill}" />
                         </Trigger>
                         <DataTrigger Binding="{Binding HasItems, RelativeSource={RelativeSource FindAncestor, AncestorType=shio:ShioTreeGridItem}}"
                                      Value="False">
@@ -255,10 +255,10 @@
                             </MultiTrigger.Conditions>
                             <Setter Property="Background"
                                     TargetName="PART_Border"
-                                    Value="{StaticResource SioTreeGridItem.MouseOver.Background}" />
+                                    Value="{StaticResource ShioTreeGridItem.MouseOver.Background}" />
                             <Setter Property="BorderBrush"
                                     TargetName="PART_Border"
-                                    Value="{StaticResource SioTreeGridItem.MouseOver.Border}" />
+                                    Value="{StaticResource ShioTreeGridItem.MouseOver.Border}" />
                         </MultiTrigger>
                         <MultiTrigger>
                             <MultiTrigger.Conditions>
@@ -269,10 +269,10 @@
                             </MultiTrigger.Conditions>
                             <Setter Property="Background"
                                     TargetName="PART_Border"
-                                    Value="{StaticResource SioTreeGridItem.SelectedInactive.Background}" />
+                                    Value="{StaticResource ShioTreeGridItem.SelectedInactive.Background}" />
                             <Setter Property="BorderBrush"
                                     TargetName="PART_Border"
-                                    Value="{StaticResource SioTreeGridItem.SelectedInactive.Border}" />
+                                    Value="{StaticResource ShioTreeGridItem.SelectedInactive.Border}" />
                         </MultiTrigger>
                         <MultiTrigger>
                             <MultiTrigger.Conditions>
@@ -283,10 +283,10 @@
                             </MultiTrigger.Conditions>
                             <Setter Property="Background"
                                     TargetName="PART_Border"
-                                    Value="{StaticResource SioTreeGridItem.SelectedActive.Background}" />
+                                    Value="{StaticResource ShioTreeGridItem.SelectedActive.Background}" />
                             <Setter Property="BorderBrush"
                                     TargetName="PART_Border"
-                                    Value="{StaticResource SioTreeGridItem.SelectedActive.Border}" />
+                                    Value="{StaticResource ShioTreeGridItem.SelectedActive.Border}" />
                         </MultiTrigger>
                         <Trigger Property="IsEnabled"
                                  Value="False">
@@ -319,7 +319,7 @@
                                           HorizontalScrollBarVisibility="Hidden"
                                           VerticalScrollBarVisibility="Hidden"
                                           Focusable="false"
-                                          Background="{DynamicResource SioTreeGrid.ColumnHeader.Fill}">
+                                          Background="{DynamicResource ShioTreeGrid.ColumnHeader.Fill}">
                                 <GridViewHeaderRowPresenter Margin="{
                                     Binding Path=TemplatedParent.View, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource MarginConverter}}"
                                                             Columns="{
@@ -385,17 +385,17 @@
         <Setter Property="ItemContainerStyle"
                 Value="{StaticResource {x:Type shio:ShioTreeGridItem}}" />
         <Setter Property="Background"
-                Value="{DynamicResource SioTreeGrid.Background}" />
+                Value="{DynamicResource ShioTreeGrid.Background}" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="shio:ShioTreeGrid">
                     <Border Name="PART_Border"
                             BorderThickness="1">
                         <Border.Background>
-                            <SolidColorBrush Color="{DynamicResource SioTreeGrid.Control.LightColor}" />
+                            <SolidColorBrush Color="{DynamicResource ShioTreeGrid.Control.LightColor}" />
                         </Border.Background>
                         <Border.BorderBrush>
-                            <SolidColorBrush Color="{DynamicResource SioTreeGrid.Border.MediumColor}" />
+                            <SolidColorBrush Color="{DynamicResource ShioTreeGrid.Border.MediumColor}" />
                         </Border.BorderBrush>
                         <ScrollViewer Style="{DynamicResource SioTreeGridViewScrollViewerStyle}">
                             <ItemsPresenter />
@@ -412,7 +412,7 @@
                             <Setter TargetName="PART_Border"
                                     Property="Background">
                                 <Setter.Value>
-                                    <SolidColorBrush Color="{DynamicResource SioTreeGrid.Border.Disabled.LightColor}" />
+                                    <SolidColorBrush Color="{DynamicResource ShioTreeGrid.Border.Disabled.LightColor}" />
                                 </Setter.Value>
                             </Setter>
                         </Trigger>
