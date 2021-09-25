@@ -82,7 +82,7 @@
     <shio:ShioTreeGridItemDepthConverter x:Key="DepthConverter" />
     <shio:ShioTreeGridItemDepthMarginConverter x:Key="DepthMarginConverter" />
 
-    <Style TargetType="{x:Type shio:ShioTreeGridItemEdgeRender}">
+    <Style TargetType="shio:ShioTreeGridItemEdgeRender">
         <Setter Property="SnapsToDevicePixels"
                 Value="true" />
         <Setter Property="UseLayoutRounding"
