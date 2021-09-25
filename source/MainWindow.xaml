@@ -1,0 +1,197 @@
+﻿<Window x:Class="ShioTreeGrid.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:scm="clr-namespace:System.ComponentModel;assembly=WindowsBase"
+        xmlns:local="clr-namespace:ShioTreeGrid"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        xmlns:shio="clr-namespace:Shio"
+        mc:Ignorable="d"
+        Title="MainWindow"
+        Height="450"
+        Width="800">
+    <Window.Resources>
+        <ResourceDictionary Source="./Themes/Generic.xaml" />
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="32" />
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <TabControl>
+                <TabItem Header="A">
+                    <TabItem.Resources>
+                        <CollectionViewSource x:Key="src"
+                                              Source="{Binding Items}">
+                            <CollectionViewSource.GroupDescriptions>
+                                <PropertyGroupDescription PropertyName="Category" />
+                            </CollectionViewSource.GroupDescriptions>
+                        </CollectionViewSource>
+                    </TabItem.Resources>
+
+                    <shio:ShioTreeGrid ItemsSource="{Binding Source={StaticResource src}}">
+
+                        <shio:ShioTreeGrid.ItemContainerStyle>
+                            <Style TargetType="{x:Type shio:ShioTreeGridItem}">
+
+                                <Setter Property="RowStyle">
+                                    <Setter.Value>
+                                        <Style TargetType="{x:Type GridViewRowPresenter}">
+                                            <Setter Property="Height"
+                                                    Value="60" />
+                                        </Style>
+                                    </Setter.Value>
+                                </Setter>
+
+                            </Style>
+                        </shio:ShioTreeGrid.ItemContainerStyle>
+
+                        <shio:ShioTreeGrid.ItemTemplate>
+                            <HierarchicalDataTemplate ItemsSource="{Binding Children}" />
+                        </shio:ShioTreeGrid.ItemTemplate>
+
+                        <shio:ShioTreeGrid.GroupStyle>
+                            <GroupStyle>
+                                <GroupStyle.ContainerStyle>
+                                    <Style TargetType="{x:Type GroupItem}">
+                                        <Setter Property="Margin"
+                                                Value="0,0,0,5" />
+                                        <Setter Property="Template">
+                                            <Setter.Value>
+                                                <ControlTemplate TargetType="{x:Type GroupItem}">
+                                                    <Expander IsExpanded="True"
+                                                              BorderBrush="#FFA4B97F"
+                                                              BorderThickness="0,0,0,1">
+                                                        <Expander.Header>
+                                                            <DockPanel>
+                                                                <TextBlock FontWeight="Bold"
+                                                                           Text="{Binding Path=Name}"
+                                                                           Margin="5,0,0,0"
+                                                                           Width="100" />
+                                                                <TextBlock FontWeight="Bold"
+                                                                           Text="{Binding Path=ItemCount}" />
+                                                            </DockPanel>
+                                                        </Expander.Header>
+                                                        <Expander.Content>
+                                                            <ItemsPresenter />
+                                                        </Expander.Content>
+                                                    </Expander>
+                                                </ControlTemplate>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </Style>
+                                </GroupStyle.ContainerStyle>
+                            </GroupStyle>
+                        </shio:ShioTreeGrid.GroupStyle>
+
+                        <shio:ShioTreeGrid.View>
+                            <shio:ShioTreeGridView AllowsColumnReorder="{Binding AllowsColumnReorder, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"
+                                                 EdgeLineVisibility="{Binding EdgeLineVisibility, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"
+                                                 SectionVisibility="True"
+                                                 SectionThickness="10"
+                                                 SectionBrush="Red">
+
+                                <shio:ShioTreeGridView.Columns>
+                                    <GridViewColumn Header="ProductId"
+                                                    Width="500">
+                                        <GridViewColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <StackPanel Orientation="Horizontal">
+                                                    <shio:ShioTreeGridItemExpander />
+                                                    <TextBlock Text="{Binding ProductId}" />
+                                                </StackPanel>
+                                            </DataTemplate>
+                                        </GridViewColumn.CellTemplate>
+                                    </GridViewColumn>
+                                    <GridViewColumn Header="ProductName"
+                                                    Width="80">
+                                        <GridViewColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <TextBlock Text="{Binding ProductName}" />
+                                            </DataTemplate>
+                                        </GridViewColumn.CellTemplate>
+                                    </GridViewColumn>
+                                    <GridViewColumn Header="Category"
+                                                    Width="80">
+                                        <GridViewColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <TextBlock Text="{Binding Category}" />
+                                            </DataTemplate>
+                                        </GridViewColumn.CellTemplate>
+                                    </GridViewColumn>
+                                    <GridViewColumn Header="UnitPrice"
+                                                    Width="80">
+                                        <GridViewColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <TextBlock Text="{Binding UnitPrice}" />
+                                            </DataTemplate>
+                                        </GridViewColumn.CellTemplate>
+                                    </GridViewColumn>
+                                    <GridViewColumn Header="UnitsInStock"
+                                                    Width="80">
+                                        <GridViewColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <TextBlock Text="{Binding UnitsInStock}" />
+                                            </DataTemplate>
+                                        </GridViewColumn.CellTemplate>
+                                    </GridViewColumn>
+                                </shio:ShioTreeGridView.Columns>
+                            </shio:ShioTreeGridView>
+                        </shio:ShioTreeGrid.View>
+                    </shio:ShioTreeGrid>
+                </TabItem>
+                <TabItem Header="B">
+                    <shio:ShioTreeGrid>
+                        <shio:ShioTreeGridItem Header="a">
+                            <shio:ShioTreeGridItem Header="a 1" />
+                            <shio:ShioTreeGridItem Header="a 2" />
+                            <shio:ShioTreeGridItem Header="a 3" />
+                            <shio:ShioTreeGridItem Header="a 4">
+                                <shio:ShioTreeGridItem Header="a 4, 1" />
+                                <shio:ShioTreeGridItem Header="a 4, 2" />
+                                <shio:ShioTreeGridItem Header="a 4, 3" />
+                                <shio:ShioTreeGridItem Header="a 4, 4" />
+                            </shio:ShioTreeGridItem>
+                            <shio:ShioTreeGridItem Header="a 5" />
+                        </shio:ShioTreeGridItem>
+
+                        <shio:ShioTreeGridItem Header="b">
+                            <shio:ShioTreeGridItem Header="b 1" />
+                            <shio:ShioTreeGridItem Header="b 2" />
+                            <shio:ShioTreeGridItem Header="b 3" />
+                            <shio:ShioTreeGridItem Header="b 4" />
+                            <shio:ShioTreeGridItem Header="b 5" />
+                            <shio:ShioTreeGridItem Header="b 6" />
+                        </shio:ShioTreeGridItem>
+
+                        <shio:ShioTreeGrid.View>
+                            <shio:ShioTreeGridView EdgeLineVisibility="true">
+                                <shio:ShioTreeGridView.Columns>
+                                    <GridViewColumn Header="Name"
+                                                    Width="500">
+                                        <GridViewColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <StackPanel Orientation="Horizontal">
+                                                    <shio:ShioTreeGridItemExpander />
+                                                    <TextBlock Text="{Binding}" />
+                                                </StackPanel>
+                                            </DataTemplate>
+                                        </GridViewColumn.CellTemplate>
+                                    </GridViewColumn>
+                                </shio:ShioTreeGridView.Columns>
+                            </shio:ShioTreeGridView>
+                        </shio:ShioTreeGrid.View>
+                    </shio:ShioTreeGrid>
+                </TabItem>
+            </TabControl>
+        </Grid>
+
+        <Button Grid.Row="1"
+                Click="Button_Click"></Button>
+
+    </Grid>
+</Window>
