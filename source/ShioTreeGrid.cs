@@ -78,7 +78,8 @@ namespace Shio
 
             if (acx != null)
             {
-                if (this.Dispatcher.CheckAccess() == true)
+                if (this.IsLoaded == true &&
+                    this.Dispatcher.CheckAccess() == true)
                 {
                     acx();
                 }
