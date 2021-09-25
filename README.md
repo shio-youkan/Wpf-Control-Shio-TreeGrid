@@ -1,2 +1,2 @@
 # Wpf-Control-ShioTreeGrid
-Thank you to all OSS and those who support it.
+Thanks to all OSS and developers, and those who support them.
